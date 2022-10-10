@@ -11,7 +11,7 @@ $ make terraform-apply-auto-approve
 ```
 
 ## Onion architecture
-See `terraform/module/mochi_counter/src`. 
+See [terraform/module/mochi_counter/src](./terraform/module/mochi_counter/src/src). 
 
 ```
 .
