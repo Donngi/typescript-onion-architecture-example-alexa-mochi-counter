@@ -11,7 +11,7 @@ $ make terraform-apply-auto-approve
 ```
 
 ## Onion architecture
-See [terraform/module/mochi_counter/src](./terraform/module/mochi_counter/src/src). 
+See [terraform/module/mochi_counter/src](./terraform/module/mochi_counter/src). 
 
 ```
 .
@@ -36,7 +36,9 @@ See [terraform/module/mochi_counter/src](./terraform/module/mochi_counter/src/sr
 └── tsconfig.json
 ```
 
-###  src
+###  src 
+[./terraform/module/mochi_counter/src/src](./terraform/module/mochi_counter/src/src). 
+
 TypeScript code implemented by Onion architecture.
 
 It includes minimal unit test code. 
@@ -45,6 +47,8 @@ It includes minimal unit test code.
 Mochi-counter uses Amazon DynamoDB. You can also learn how to mock AWS clients like `DynamoDBClient`.
 
 ### scripts
+[./terraform/module/mochi_counter/src/scripts/build.js](./terraform/module/mochi_counter/src/scripts/build.js). 
+
 Build script for esbuild.
 
 ## License
