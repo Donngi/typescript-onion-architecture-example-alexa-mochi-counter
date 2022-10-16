@@ -2,7 +2,7 @@ import { DynamoDBDocumentClient, UpdateCommand } from '@aws-sdk/lib-dynamodb'
 import { MochiCountRepository, ResultMochiCount } from "../domain/MochiCountRepository";
 
 export class MochiCountRepositoryImpl implements MochiCountRepository {
-    constructor(private client: DynamoDBDocumentClient, private dynamodbName: string) { }
+    constructor(private readonly client: DynamoDBDocumentClient, private readonly dynamodbName: string) { }
 
     async addMochi(this: MochiCountRepositoryImpl, person: string, mochiCount: number): Promise<ResultMochiCount> {
         const res = await this.client.send(new UpdateCommand({

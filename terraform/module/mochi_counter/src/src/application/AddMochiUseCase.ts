@@ -2,7 +2,7 @@ import { MochiCountRepository } from "../domain/MochiCountRepository";
 
 export class AddMochiUseCase {
 
-  constructor(private repository: MochiCountRepository) { }
+  constructor(private readonly repository: MochiCountRepository) { }
 
   async run(this: AddMochiUseCase, person: string, mochiCount: number) {
     try {
