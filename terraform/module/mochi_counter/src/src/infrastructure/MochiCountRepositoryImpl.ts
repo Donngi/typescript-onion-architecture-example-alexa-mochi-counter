@@ -10,7 +10,7 @@ export class MochiCountRepositoryImpl implements MochiCountRepository {
         this.dynamodbName = dynamodbName
     }
 
-    async addMochi(person: string, mochiCount: number): Promise<ResultMochiCount> {
+    async addMochi(this: MochiCountRepositoryImpl, person: string, mochiCount: number): Promise<ResultMochiCount> {
         const res = await this.client.send(new UpdateCommand({
             TableName: this.dynamodbName,
             Key: {
@@ -32,7 +32,7 @@ export class MochiCountRepositoryImpl implements MochiCountRepository {
         }
     }
 
-    async removeMochi(person: string, mochiCount: number): Promise<ResultMochiCount> {
+    async removeMochi(this: MochiCountRepositoryImpl, person: string, mochiCount: number): Promise<ResultMochiCount> {
         const res = await this.client.send(new UpdateCommand({
             TableName: this.dynamodbName,
             Key: {

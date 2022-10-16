@@ -7,7 +7,7 @@ export class RemoveMochiUseCase {
         this.repository = repository
     }
 
-    async run(person: string, mochiCount: number) {
+    async run(this: RemoveMochiUseCase, person: string, mochiCount: number) {
         try {
             const result = await this.repository.removeMochi(person, mochiCount)
             return {

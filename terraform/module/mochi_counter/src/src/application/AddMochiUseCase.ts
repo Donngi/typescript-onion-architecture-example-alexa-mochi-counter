@@ -7,7 +7,7 @@ export class AddMochiUseCase {
     this.repository = repository
   }
 
-  async run(person: string, mochiCount: number) {
+  async run(this: AddMochiUseCase, person: string, mochiCount: number) {
     try {
       const result = await this.repository.addMochi(person, mochiCount)
       return {
