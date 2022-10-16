@@ -1,11 +1,8 @@
 import { MochiCountRepository } from "../domain/MochiCountRepository";
 
 export class AddMochiUseCase {
-  repository: MochiCountRepository
 
-  constructor(repository: MochiCountRepository) {
-    this.repository = repository
-  }
+  constructor(private repository: MochiCountRepository) { }
 
   async run(this: AddMochiUseCase, person: string, mochiCount: number) {
     try {
